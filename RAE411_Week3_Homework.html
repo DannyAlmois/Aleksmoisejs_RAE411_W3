@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2",
+	title:{
+		text: "RAE411 Week3"
+	},
+	data: [{        
+		type: "line",
+      	indexLabelFontSize: 16,
+		dataPoints: [
+			{ y: 33 },
+			{ y: 11 },
+			{ y: 0  },
+			{ y: 22 },
+			{ y: 44 },
+			{ y: 46, indexLabel: "b-score",markerColor: "green", markerType: "triangle" },
+			{ y: 68 },
+			{ y: 77, indexLabel: "a-score",markerColor: "red", markerType: "triangle"  },
+			{ y: 91 , indexLabel: "c-score",markerColor: "blue", markerType: "triangle" },
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
